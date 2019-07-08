@@ -2,7 +2,7 @@
   "series": [
     {
       "id": 1,
-      "name": "How I met your mother",
+      "name": "How I met your mother 22",
       "status": "watched",
       "genre": "Comédia",
       "comments": "Muito bom"
@@ -15,9 +15,23 @@
       "comments": "Say My Name - melhor cena"
     },
     {
+      "id": 4,
+      "name": "teste 444444444",
+      "status": "watching",
+      "genre": "Comédia",
+      "comments": "teste"
+    },
+    {
       "name": "teste",
-      "status": "toWatch",
-      "genre": "Ação",
+      "status": "watched",
+      "genre": "Comédia",
+      "comments": "teste",
+      "id": 5
+    },
+    {
+      "name": "teste",
+      "status": "watched",
+      "genre": "Comédia",
       "comments": "teste",
       "id": 6
     }

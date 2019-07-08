@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 import api from '../bd/Api'
 
@@ -21,9 +21,7 @@ class Serie extends Component {
     }
     deleteSeries(id) {
         api.deleteSeries(id).then((res) => 
-            this.setState({
-                redirect: `/series/${this.props.dados.genre}`
-            })
+            this.forceUpdate()
         )
     }
     render() {
@@ -34,7 +32,7 @@ class Serie extends Component {
                     this.state.redirect &&
                     <Redirect to={this.state.redirect} />
                 }
-                <div className="thumbnail">
+                <div key={this.props.dados.id} className="thumbnail">
                     <img className="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
                     <div className="caption">
                         <h4 className="group inner list-group-item-heading">
@@ -45,7 +43,7 @@ class Serie extends Component {
                                     {this.props.dados.genre} / {statuses[this.props.dados.status]}</p>
                             </div>
                             <div className="col-xs-12 col-md-6">
-                                <a className="btn btn-success" to="">Gerenciar</a>
+                                <Link className="btn btn-success" to={`/series-edit/${this.props.dados.id}`}>Gerenciar</Link>
                                 <a className="btn btn-success" onClick={() => this.deleteSeries(this.props.dados.id)}>Apagar</a>
                             </div>
                         </div>

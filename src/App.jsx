@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Menu from './template/Menu'
 import About from './components/About'
 import New from './components/NewSeries'
+import EditSeries from './components/EditSeries'
 import Series from './components/Series'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
         <div>
           <Menu />
           <Route exact path='/' component={Home} />
+          <Route path='/series-edit/:id' component={EditSeries} />
           <Route path='/series/:genre' component={Series} />
           <Route exact path='/new' component={New} />
           <Route exact path='/about' component={About} />
