@@ -1,0 +1,30 @@
+{
+  "series": [
+    {
+      "id": 1,
+      "name": "How I met your mother",
+      "status": "watched",
+      "genre": "Comédia",
+      "comments": "Muito bom"
+    },
+    {
+      "id": 3,
+      "name": "Breaking Bad",
+      "status": "watched",
+      "genre": "Drama",
+      "comments": "Say My Name - melhor cena"
+    },
+    {
+      "name": "teste",
+      "status": "toWatch",
+      "genre": "Ação",
+      "comments": "teste",
+      "id": 6
+    }
+  ],
+  "genres": [
+    "Comédia",
+    "Drama",
+    "Ação"
+  ]
+}
